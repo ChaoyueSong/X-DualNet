@@ -44,17 +44,10 @@ python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
 The results will be saved in `./human_mesh_test/` by default.
 
 ## Training
-
-To train a conditional radiance field on the PhotoShapes dataset, please run:
+To train new models, please run:
 ```bash
 python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
 ```
-
-To train on other datasets, or use a different model architecture, you can replace the config file with your own. Feel free to check out example config files under `configs/`. For additional training options, please visit `inputs.py`.
-
-
-## Training and Editing Your Own Models
-
 
 ## Citation
 If you use this code for your research, please cite the following work.

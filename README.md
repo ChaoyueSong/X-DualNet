@@ -21,18 +21,14 @@ git clone https://github.com/ChaoyueSong/3d-corenet.git
 cd 3d-corenet
 ```
 
+
 - Install the dependencies
+Our code is based on using Python 3.6, PyTorch 1.8. And we also need pymesh.
 ```bash
-conda create --name editnerf python=3.6
-conda activate editnerf
-conda install --file requirements.txt
-pip install lpips imageio-ffmpeg
-cd torchsearchsorted
-pip install .
-cd ../
+conda install -c conda-forge pymesh2
 ```
 
-This code also requires the Synchronized-BatchNorm-PyTorch rep.
+- Clone the Synchronized-BatchNorm-PyTorch repo.
 ```
 cd models/networks/
 git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
@@ -40,7 +36,7 @@ cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
 cd ../../
 ```
 
-Our code is tested on using Python 3.6, PyTorch 1.3.1, and CUDA 10.1.
+
 
 
 ## Editing a Conditional Radiance Field

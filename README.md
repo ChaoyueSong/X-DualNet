@@ -47,9 +47,8 @@ The results will be saved in `./human_mesh_test/` by default.
 
 To train a conditional radiance field on the PhotoShapes dataset, please run:
 ```bash
-python run_nerf.py --config configs/photoshapes/config.txt --skip_loading
+python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
 ```
-The `--skip_loading` flag tells the script not to load the pretrained weights during training.
 
 To train on other datasets, or use a different model architecture, you can replace the config file with your own. Feel free to check out example config files under `configs/`. For additional training options, please visit `inputs.py`.
 

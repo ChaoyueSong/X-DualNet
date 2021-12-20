@@ -10,7 +10,7 @@ Ruibo Li,
 [Guosheng Lin](https://guosheng.github.io/) <br>
 in NeurIPS, 2021.
 
-<a href="http://editnerf.csail.mit.edu/"><img src="images/demo.gif" width=800></a>
+<img src="files/3dpt.gif" width="60%" height="60%" /> <br>
 
 
 ## Editing Results

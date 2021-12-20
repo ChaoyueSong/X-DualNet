@@ -42,10 +42,9 @@ Download the pretrained model from [pretrained model link](https://drive.google.
 ````bash
 python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
 ````
+The results will be saved in `./human_mesh_test/` by default.
 
-## Learning a Conditional Radiance Field
-
-### Training
+## Training
 
 To train a conditional radiance field on the PhotoShapes dataset, please run:
 ```bash

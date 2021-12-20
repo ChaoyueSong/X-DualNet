@@ -22,8 +22,7 @@ cd 3d-corenet
 ```
 
 
-- Install the dependencies
-Our code is based on using Python 3.6, PyTorch 1.8. And we also need pymesh.
+- Install the dependencies. Our code is based on Python 3.6, PyTorch 1.8. And we also need pymesh.
 ```bash
 conda install -c conda-forge pymesh2
 ```
@@ -37,24 +36,12 @@ cd ../../
 ```
 
 
+## Generating Meshes Using Pretrained model
 
-
-## Editing a Conditional Radiance Field
-
-To conduct your own edits, please check out our demo. Alternatively, you can run the demo locally using `jupyter notebook` and using the notebook `ui/editing.ipynb`.
-
-To execute the edits used in our paper, please run:
-```bash
-bash scripts/editing_experiments.sh
-```
-
-To evaluate the edits used in our paper, please run:
-```bash
-bash scripts/evaluate_edits.sh
-```
-
-Feel free to check out additional editing examples, which can be run via `scripts/additional_edits.sh`.
-
+Download the pretrained model from [pretrained model link](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/`. Then run the command 
+````bash
+python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
+````
 
 ## Learning a Conditional Radiance Field
 

@@ -17,8 +17,8 @@ in NeurIPS, 2021.
 ### Installation
 - Clone this repo:
 ```bash
-git clone https://github.com/stevliu/editnerf.git
-cd editnerf
+git clone https://github.com/ChaoyueSong/3d-corenet.git
+cd 3d-corenet
 ```
 
 - Install the dependencies
@@ -31,6 +31,7 @@ cd torchsearchsorted
 pip install .
 cd ../
 ```
+
 This code also requires the Synchronized-BatchNorm-PyTorch rep.
 ```
 cd models/networks/

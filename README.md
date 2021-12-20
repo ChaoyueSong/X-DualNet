@@ -55,11 +55,10 @@ python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --n
 If you use this code for your research, please cite the following work.
 
 ```bash
-@article{song20213d,
+@inproceedings{song20213d,
   title={3D Pose Transfer with Correspondence Learning and Mesh Refinement},
   author={Song, Chaoyue and Wei, Jiacheng and Li, Ruibo and Liu, Fayao and Lin, Guosheng},
-  journal={Advances in Neural Information Processing Systems},
-  volume={34},
+  booktitle={Thirty-Fifth Conference on Neural Information Processing Systems},
   year={2021}
 }
 ```

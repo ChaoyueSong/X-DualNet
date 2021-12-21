@@ -21,7 +21,7 @@ git clone https://github.com/ChaoyueSong/3d-corenet.git
 cd 3d-corenet
 ```
 
-- Install the dependencies. Our code is based on Python 3.6, PyTorch 1.8. And we also need pymesh.
+- Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work). And we also need pymesh.
 ```bash
 conda install -c conda-forge pymesh2
 ```

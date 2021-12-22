@@ -35,7 +35,7 @@ cd ../../
 ```
 
 ## Dataset preparation
-We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY). And we use [SMAL](https://smal.is.tue.mpg.de/) as our animal mesh data, please download it [here]().
+We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY). And we generate our animal mesh data using [SMAL](https://smal.is.tue.mpg.de/), please download it [here]().
 
 ## Generating Meshes Using Pretrained model
 

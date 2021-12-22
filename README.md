@@ -60,7 +60,7 @@ To train new models on human meshes, please run:
 ```bash
 python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
 ```
-#### 1) SMAL (animal) 
+#### 2) SMAL (animal) 
 To train new models on animal meshes, please run:
 ```bash
 python train.py --dataset_mode animal --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1

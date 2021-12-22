@@ -35,22 +35,37 @@ cd ../../
 ```
 
 ## Dataset preparation
-We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY).
+We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY). And we use [SMAL](https://smal.is.tue.mpg.de/) as our animal mesh data, please download it [here]().
 
 ## Generating Meshes Using Pretrained model
 
-Download the pretrained model from [pretrained model link](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/`. Then run the command 
+
+#### 1) SMPL (human) 
+Download the pretrained model from [pretrained model link](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/human`. Then run the command 
 ````bash
 python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
 ````
 The results will be saved in `human_mesh_test/` by default.
 
+#### 2) SMAL (animal) 
+Download the pretrained model from [pretrained model link](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/animal`. Then run the command 
+````bash
+python test.py --dataset_mode animal --dataroot [Your data path] --gpu_ids 0
+````
+The results will be saved in `animal_mesh_test/` by default.
+
 ## Training
-To train new models, please run:
+#### 1) SMPL (human) 
+To train new models on human meshes, please run:
 ```bash
 python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
 ```
-
+#### 1) SMAL (animal) 
+To train new models on animal meshes, please run:
+```bash
+python train.py --dataset_mode animal --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
+```
+Please change the batch size and gpu_ids as you desired.
 ## Citation
 If you use this code for your research, please cite the following work.
 

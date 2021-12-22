@@ -45,14 +45,14 @@ Download the pretrained model from [pretrained model link](https://drive.google.
 ````bash
 python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
 ````
-The results will be saved in `human_mesh_test/` by default.
+The results will be saved in `human_mesh_test/` by default. `human_test_list` is randomly choosed for testing.
 
 #### 2) SMAL (animal) 
 Download the pretrained model from [pretrained model link](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/animal`. Then run the command 
 ````bash
 python test.py --dataset_mode animal --dataroot [Your data path] --gpu_ids 0
 ````
-The results will be saved in `animal_mesh_test/` by default.
+The results will be saved in `animal_mesh_test/` by default. `animal_test_list` is randomly choosed for testing.
 
 ## Training
 #### 1) SMPL (human) 

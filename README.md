@@ -38,7 +38,7 @@ cd ../../
 We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY). And we generate our animal mesh data using [SMAL](https://smal.is.tue.mpg.de/), please download it [here]().
 
 ## Generating Meshes Using Pretrained model
-
+By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
 
 #### 1) SMPL (human) 
 Download the pretrained model from [pretrained model link](https://drive.google.com/drive/folders/1BEBBENbEr9tutZsyGGc3REUuuOYqf6M3?usp=sharing) and save them in `checkpoints/human`. Then run the command 
@@ -60,12 +60,18 @@ To train new models on human meshes, please run:
 ```bash
 python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
 ```
+The output meshes in the training process will be saved in `output/human/`.
 #### 2) SMAL (animal) 
 To train new models on animal meshes, please run:
 ```bash
 python train.py --dataset_mode animal --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 8 --gpu_ids 0,1
 ```
+The output meshes in the training process will be saved in `output/animal/`.
+
+
 Please change the batch size and gpu_ids as you desired.
+
+If you need continue training from checkpoint, use `--continue_train`.
 ## Citation
 If you use this code for your research, please cite the following work.
 

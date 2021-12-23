@@ -12,9 +12,7 @@ in NeurIPS, 2021.
 
 <img src="files/3dpt.gif" width="60%" height="60%" /> <br>
 
-## Getting Started
-
-### Installation
+## Installation
 - Clone this repo:
 ```bash
 git clone https://github.com/ChaoyueSong/3d-corenet.git

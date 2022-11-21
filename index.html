@@ -264,12 +264,17 @@ artifacts and cannot transfer the pose successfully. The proposed baseline somet
         <hr>
 	
 	<center><h1>Ablation studies</h1></center>
-	we study the effectiveness of ElaIN, ARAP deformer, and backward correspondence loss in our model on human data.  <br><br>
-	<table align=center width=600px>
+	we study the effectiveness of ElaIN, ARAP deformer, and backward correspondence loss in our model on human data. When we
+replace our ElaIN with SPAdaIN, the surface of the mesh
+has clear artifacts and is not smooth. When we do not add the ARAP deformer in the training loop, the generated
+results do not preserve the body shape well which can be shown in the green bounding boxes. In the third column, the body shape is sunken from the
+left and right sides. When we remove the backward correspondence loss in the training, the pose transfer results are not accurate which can
+be shown in the red bounding boxes. In the fourth column, the right arm is farther from the body than others. <br><br>
+	<table align=center width=500px>
   		<tr>
-			<td width=600px>
+			<td width=500px>
 				<center>
-					<td><img class="round" style="width:600px" src="./misc/fig6.png"/></td>
+					<td><img class="round" style="width:500px" src="./misc/fig6.png"/></td>
 				</center>
 			</td>
 		</tr>

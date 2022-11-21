@@ -1,0 +1,377 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+	body {
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+		font-weight:300;
+		font-size:18px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+	}
+	
+	h1 {
+		font-size:32px;
+		font-weight:300;
+	}
+	
+	.disclaimerbox {
+		background-color: #eee;		
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+		padding: 20px;
+	}
+
+	video.header-vid {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.header-img {
+		height: 140px;
+		border: 1px solid black;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	img.rounded {
+		border: 1px solid #eeeeee;
+		border-radius: 10px ;
+		-moz-border-radius: 10px ;
+		-webkit-border-radius: 10px ;
+	}
+	
+	a:link,a:visited
+	{
+		color: #1367a7;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #208799;
+	}
+	
+	td.dl-link {
+		height: 160px;
+		text-align: center;
+		font-size: 22px;
+	}
+	
+	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+		15px 15px 0 0px #fff, /* The fourth layer */
+		15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+		20px 20px 0 0px #fff, /* The fifth layer */
+		20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+		25px 25px 0 0px #fff, /* The fifth layer */
+		25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
+
+		margin-left: 10px;
+		margin-right: 45px;
+	}
+
+
+	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+		box-shadow:
+		0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+		5px 5px 0 0px #fff, /* The second layer */
+		5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+		10px 10px 0 0px #fff, /* The third layer */
+		10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+		margin-top: 5px;
+		margin-left: 10px;
+		margin-right: 30px;
+		margin-bottom: 5px;
+	}
+	
+	.vert-cent {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	hr
+	{
+		border: 0;
+		height: 1px;
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+	}
+</style>
+
+<html>
+<head>
+	<title>3D Pose Transfer with Correspondence Learning and Mesh Refinement</title>
+	<meta property="og:image" content="./files/3dpt.gif"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+	<meta property="og:title" content="3D Pose Transfer with Correspondence Learning and Mesh Refinement" />
+	<meta property="og:description" content="Transfer the pose from source mesh to target mesh." />
+
+	<!-- Get from Google Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src=""></script> 
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-75863369-6');
+	</script>
+</head>
+
+<body>
+	<br>
+	<center>
+		<span style="font-size:36px">3D Pose Transfer with Correspondence Learning and Mesh Refinement</span><br>
+		<span style="font-size:25px;line-height:2.0">NeurIPS 2021</span><br>
+		<table align=center width=1100px>
+			<table align=center width=1100px>
+				<tr>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:22px"><a href="https://chaoyuesong.github.io">Chaoyue Song</a></span>
+						</center>
+					</td>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:22px">Jiacheng Wei</span>
+						</center>
+					</td>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:22px"><a href="https://scholar.google.com/citations?user=qtGY5T4AAAAJ&hl">Ruibo Li</a></span>
+						</center>
+					</td>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:22px"><a href="https://sites.google.com/site/fayaoliu/">Fayao Liu</a></span>
+						</center>
+					</td>
+					<td align=center width=250px>
+						<center>
+							<span style="font-size:22px"><a href="https://guosheng.github.io/">Guosheng Lin</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=360px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2109.15025'>[Paper]</a></span>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/ChaoyueSong/3d-corenet/'>[GitHub]</a></span><br>
+						</center>
+					</td>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=HjBvPhZSl-o'>[Video]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+
+	<center>
+		<table align=center width=850px>
+			<tr>
+				<td width=260px>
+					<center>
+						<img class="round" style="width:500px" src="./files/3dpt.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td>
+				3D pose transfer is one of the most challenging 3D generation tasks. It aims to transfer the pose of a source mesh to a target mesh and keep the identity (e.g., body shape) of the target mesh. Some previous works require key point annotations to build reliable correspondence between the source and target meshes, while other methods do not consider any shape correspondence between sources and targets, which leads to limited generation quality. In this work, we propose a correspondence-refinement network to help the 3D pose transfer for both human and animal meshes. The correspondence between source and target meshes is first established by solving an optimal transport problem. Then, we warp the source mesh according to the dense correspondence and obtain a coarse warped mesh. The warped mesh will be better refined with our proposed Elastic Instance Normalization, which is a conditional normalization layer and can help to generate highquality meshes. Extensive experimental results show that the proposed architecture can effectively transfer the poses from source to target meshes and produce better results with satisfied visual performance than state-of-the-art methods.
+			</td>
+		</tr>
+	</table>
+	<br>
+	<hr>
+	
+	
+<!-- 	<center><h1>Video</h1></center>
+        <table align="center" width="700px">
+            <tbody><tr>
+
+                    <td align="center" width="700px">
+			<center>
+			    <iframe width="1120" height="630" src="https://www.youtub" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </center>
+                </td>
+        </tr></tbody></table>
+	<hr> -->
+	
+	<center><h1>Poster</h1></center>
+<!-- 	We show the results on human meshes and animal meshes. <br><br> -->
+	<table align=center width=1000px>
+  		<tr>
+			<td width=1000px>
+				<center>
+					<td><img class="round" style="width:1000px" src="./resources/nips2021-poster.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+        <hr>
+	
+	<center><h1>Result video</h1></center>
+<!-- 	We show the results on human meshes and animal meshes. <br><br> -->
+	<table align=center width=1000px>
+  		<tr>
+			<td width=1000px>
+				<center>
+					<td><video style="width:1000px" controls>
+						<source src="./resources/NeurIPS 2021_result_video.mp4" type="video/mp4">
+						</video>
+						</td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+        <hr>
+	
+	<center><h1>Method</h1></center>
+        We solve the pose transfer problem with our proposed correspondence-refinement network. We learn the shape correspondence by solving an optimal transport problem without any key point
+annotations and generate high-quality final meshes with our proposed elastic instance normalization in the refinement module. <br><br>
+	<table align=center width=900px>
+		<tr>
+			<td align=center width=900px>
+				<center>
+					<td><img class="round" style="width:900px" src="./resources/method.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+
+	<br>
+	<hr>
+	
+	<center><h1>Results on human and animal meshes</h1></center>
+<!-- 	We show the results on human meshes and animal meshes. <br><br> -->
+	<table align=center width=900px>
+  		<tr>
+			<td width=900px>
+				<center>
+					<td><img class="round" style="width:900px" src="./resources/fig1.jpg"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+        <hr>
+	
+	<center><h1>Comparison with other methods on human meshes</h1></center>
+	The identity and pose meshes are from SMPL. Our method and DT (needs key point annotations) can generate better results than Wang et al. when doing pose transfer on human meshes. The results generated by Wang et al. are always not smooth on the arms or legs. Since DT needs user to label the key point annotations, our method is more efficient and practical than DT. <br><br>
+	<table align=center width=900px>
+  		<tr>
+			<td width=900px>
+				<center>
+					<td><img class="round" style="width:900px" src="./resources/fig4.jpg"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+        <hr>
+	
+	<center><h1>Comparison with other methods on animal meshes</h1></center>
+	The identity and pose meshes are from SMAL. Our method produces more successful results when doing pose transfer on different animal meshes. Although DT has key point annotations, it still fails to transfer the pose when the identity of the mesh pairs are very different. The method of Wang et al. produces very flat legs and wrong direction faces. <br><br>
+	<table align=center width=900px>
+  		<tr>
+			<td width=900px>
+				<center>
+					<td><img class="round" style="width:900px" src="./resources/fig5.jpg"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+        <hr>
+	
+	<center><h1>Generalization capability</h1></center>
+	To evaluate the generalization capability of our method, we evaluate it on FAUST and MG-dataset. Human meshes in FAUST have the same number of vertices as SMPL and have more unseen identities. In MG-dataset, the human meshes are all dressed which have 27554 vertices each and have more realistic details. Our method can also have a good performance on FAUST and MG-dataset.  <br><br>
+	<table align=center width=900px>
+  		<tr>
+			<td width=900px>
+				<center>
+					<td><img class="round" style="width:900px" src="./resources/generalization cap.png"/></td>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<br>
+        <hr>
+	
+	<table align=center width=450px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./resources/paper.png"/></a></td>
+			<td><span style="font-size:14pt">C. Song, J. Wei, R. Li, F. Liu, G. Lin.<br>
+				<b>3D Pose Transfer with Correspondence Learning and Mesh Refinement.</b><br>
+				NeurIPS, 2021.<br>
+				(hosted on <a href="https://arxiv.org/abs/2109.15025">ArXiv</a>)<br>
+				<!-- (<a href="./resources/camera-ready.pdf">camera ready</a>)<br> -->
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./resources/bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
+
+<br>
+</body>
+</html>
+

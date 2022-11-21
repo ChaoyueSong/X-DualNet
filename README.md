@@ -8,7 +8,7 @@ Jiacheng Wei,
 Ruibo Li,
 [Fayao Liu](https://sites.google.com/site/fayaoliu/),
 [Guosheng Lin](https://guosheng.github.io/) <br>
-arXiv:2211.10278.
+Submitted to TPAMI.
 
 <img src="misc/network.png" width="100%" height="100%" /> <br>
 

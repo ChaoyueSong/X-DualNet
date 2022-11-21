@@ -10,7 +10,7 @@ Ruibo Li,
 [Guosheng Lin](https://guosheng.github.io/) <br>
 arXiv:2211.10278.
 
-<img src="misc/network.png" width="110%" height="110%" /> <br>
+<img src="misc/network-1.png" width="110%" height="110%" /> <br>
 
 ## Installation
 - Clone this repo:

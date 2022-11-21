@@ -118,9 +118,9 @@
 
 <html>
 <head>
-	<title>3D Pose Transfer with Correspondence Learning and Mesh Refinement</title>
+	<title>Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction</title>
 	<meta property="og:image" content="./files/3dpt.gif"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
-	<meta property="og:title" content="3D Pose Transfer with Correspondence Learning and Mesh Refinement" />
+	<meta property="og:title" content="Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction" />
 	<meta property="og:description" content="Transfer the pose from source mesh to target mesh." />
 
 	<!-- Get from Google Analytics -->
@@ -138,8 +138,8 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">3D Pose Transfer with Correspondence Learning and Mesh Refinement</span><br>
-		<span style="font-size:25px;line-height:2.0">NeurIPS 2021</span><br>
+		<span style="font-size:36px">Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction</span><br>
+		<span style="font-size:25px;line-height:2.0">arXiv:2211.10278</span><br>
 		<table align=center width=1100px>
 			<table align=center width=1100px>
 				<tr>
@@ -174,19 +174,19 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://arxiv.org/abs/2109.15025'>[Paper]</a></span>
+							<span style="font-size:24px"><a href='https://arxiv.org/abs/2211.10278'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/ChaoyueSong/3d-corenet/'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href='https://github.com/ChaoyueSong/X-DualNet'>[GitHub]</a></span><br>
 						</center>
 					</td>
-					<td align=center width=120px>
+<!-- 					<td align=center width=120px>
 						<center>
 							<span style="font-size:24px"><a href='https://www.youtube.com/watch?v=HjBvPhZSl-o'>[Video]</a></span><br>
 						</center>
-					</td>
+					</td> -->
 				</tr>
 			</table>
 		</table>
@@ -210,7 +210,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				3D pose transfer is one of the most challenging 3D generation tasks. It aims to transfer the pose of a source mesh to a target mesh and keep the identity (e.g., body shape) of the target mesh. Some previous works require key point annotations to build reliable correspondence between the source and target meshes, while other methods do not consider any shape correspondence between sources and targets, which leads to limited generation quality. In this work, we propose a correspondence-refinement network to help the 3D pose transfer for both human and animal meshes. The correspondence between source and target meshes is first established by solving an optimal transport problem. Then, we warp the source mesh according to the dense correspondence and obtain a coarse warped mesh. The warped mesh will be better refined with our proposed Elastic Instance Normalization, which is a conditional normalization layer and can help to generate highquality meshes. Extensive experimental results show that the proposed architecture can effectively transfer the poses from source to target meshes and produce better results with satisfied visual performance than state-of-the-art methods.
+				The goal of 3D pose transfer is to transfer the pose from the source mesh to the target mesh while preserving the identity information (e.g., face, body shape) of the target mesh. Deep learning-based methods improved the efficiency and performance of 3D pose transfer. However, most of them are trained under the supervision of the ground truth, whose availability is limited in real-world scenarios. In this work, we present X-DualNet, a simple yet effective approach that enables unsupervised 3D pose transfer. In X-DualNet, we introduce a generator <math> <mi>G</mi> </math> which contains correspondence learning and pose transfer modules to achieve 3D pose transfer. We learn the shape correspondence by solving an optimal transport problem without any key point annotations and generate high-quality meshes with our elastic instance normalization (ElaIN) in the pose transfer module. With <math> <mi>G</mi> </math> as the basic component, we propose a cross consistency learning scheme and a dual reconstruction objective to learn the pose transfer without supervision. Besides that, we also adopt an as-rigid-as-possible deformer in the training process to fine-tune the body shape of the generated results. Extensive experiments on human and animal data demonstrate that our framework can successfully achieve comparable performance as the state-of-the-art supervised approaches.
 			</td>
 		</tr>
 	</table>
@@ -230,7 +230,7 @@
         </tr></tbody></table>
 	<hr> -->
 	
-	<center><h1>Poster</h1></center>
+<!-- 	<center><h1>Poster</h1></center>
 <!-- 	We show the results on human meshes and animal meshes. <br><br> -->
 	<table align=center width=1000px>
   		<tr>
@@ -242,9 +242,9 @@
 		</tr>
 	</table>
 	<br>
-        <hr>
+        <hr> -->
 	
-	<center><h1>Result video</h1></center>
+<!-- 	<center><h1>Result video</h1></center>
 <!-- 	We show the results on human meshes and animal meshes. <br><br> -->
 	<table align=center width=1000px>
   		<tr>
@@ -259,7 +259,7 @@
 		</tr>
 	</table>
 	<br>
-        <hr>
+        <hr> -->
 	
 	<center><h1>Method</h1></center>
         We solve the pose transfer problem with our proposed correspondence-refinement network. We learn the shape correspondence by solving an optimal transport problem without any key point

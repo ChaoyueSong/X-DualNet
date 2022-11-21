@@ -1,6 +1,6 @@
-@article{song20213d,
-  title={3D Pose Transfer with Correspondence Learning and Mesh Refinement},
+@inproceedings{song2022unsupervised,
+  title={Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction},
   author={Song, Chaoyue and Wei, Jiacheng and Li, Ruibo and Liu, Fayao and Lin, Guosheng},
-  journal={arXiv preprint arXiv:2109.15025},
-  year={2021}
+  journal={arXiv preprint arXiv:2211.10278},
+  year={2022}
 }

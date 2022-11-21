@@ -10,7 +10,7 @@ Ruibo Li,
 [Guosheng Lin](https://guosheng.github.io/) <br>
 arXiv:2211.10278.
 
-<img src="misc/network-1.png" width="100%" height="100%" /> <br>
+<img src="misc/network.png" width="100%" height="100%" /> <br>
 
 The code is coming soon!
 

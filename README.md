@@ -1,6 +1,6 @@
-# 3D Pose Transfer with Correspondence Learning and Mesh Refinement
+# Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction
 
-#### [Project](https://chaoyuesong.github.io/3d-corenet/) |   [Paper](https://openreview.net/pdf?id=fG01Z_unHC)
+#### [Paper](misc/x-dualnet.pdf)
 
 **3D Pose Transfer with Correspondence Learning and Mesh Refinement** <br>
 Chaoyue Song,
@@ -8,9 +8,9 @@ Jiacheng Wei,
 Ruibo Li,
 [Fayao Liu](https://sites.google.com/site/fayaoliu/),
 [Guosheng Lin](https://guosheng.github.io/) <br>
-in NeurIPS, 2021.
+arXiv:2211.10278.
 
-<img src="files/3dpt.gif" width="60%" height="60%" /> <br>
+<img src="misc/network.pdf" width="60%" height="60%" /> <br>
 
 ## Installation
 - Clone this repo:

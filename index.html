@@ -264,12 +264,7 @@ artifacts and cannot transfer the pose successfully. The proposed baseline somet
         <hr>
 	
 	<center><h1>Ablation studies</h1></center>
-	we study the effectiveness of ElaIN, ARAP deformer, and backward correspondence loss in our model on human data. When we
-replace our ElaIN with SPAdaIN, the surface of the mesh
-has clear artifacts and is not smooth. When we do not add the ARAP deformer in the training loop, the generated
-results do not preserve the body shape well which can be shown in the green bounding boxes. In the third column, the body shape is sunken from the
-left and right sides. When we remove the backward correspondence loss in the training, the pose transfer results are not accurate which can
-be shown in the red bounding boxes. In the fourth column, the right arm is farther from the body than others. <br><br>
+	we study the effectiveness of ElaIN, ARAP deformer, and backward correspondence loss in our model on human data.   <br><br>
 	<table align=center width=500px>
   		<tr>
 			<td width=500px>
@@ -279,7 +274,11 @@ be shown in the red bounding boxes. In the fourth column, the right arm is farth
 			</td>
 		</tr>
 	</table>
+        When we
+replace our ElaIN with SPAdaIN, the surface of the mesh
+has clear artifacts and is not smooth.
 	<br>
+	<hr>
 	<table align=center width=900px>
   		<tr>
 			<td width=900px>
@@ -289,6 +288,10 @@ be shown in the red bounding boxes. In the fourth column, the right arm is farth
 			</td>
 		</tr>
 	</table>
+	When we do not add the ARAP deformer in the training loop, the generated
+results do not preserve the body shape well which can be shown in the green bounding boxes. In the third column, the body shape is sunken from the
+left and right sides. When we remove the backward correspondence loss in the training, the pose transfer results are not accurate which can
+be shown in the red bounding boxes. In the fourth column, the right arm is farther from the body than others.
 	<br>
         <hr>
 	
@@ -310,10 +313,10 @@ be shown in the red bounding boxes. In the fourth column, the right arm is farth
         	<table align=center width=450px>
 		<center><h1>Related projects</h1></center>
 		<tr>
-	<p>
+	<td>
 	    <a href="https://chaoyuesong.github.io/3d-corenet/"> 3D Pose Transfer with Correspondence Learning and Mesh Refinement. NeurIPS 2021.</a> <br>
 	    <a href="https://jiashunwang.github.io/Neural-Pose-Transfer/"> Neural Pose Transfer by Spatially Adaptive Instance Normalization. CVPR 2020.</a> <br>
-	    </p>
+	    </td>
 		</tr>
 	</table>
 	<br>

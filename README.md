@@ -19,7 +19,7 @@ The code is coming soon!
 If you find our work is useful to your research, please consider citing the paper:
 
 ```bash
-@inproceedings{song2022unsupervised,
+@article{song2022unsupervised,
   title={Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction},
   author={Song, Chaoyue and Wei, Jiacheng and Li, Ruibo and Liu, Fayao and Lin, Guosheng},
   journal={arXiv preprint arXiv:2211.10278},

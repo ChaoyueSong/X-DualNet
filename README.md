@@ -21,7 +21,7 @@ git clone https://github.com/ChaoyueSong/X-DualNet.git
 cd X-DualNet
 ```
 
-- Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work). And we also need pymesh.
+- Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work). We also need pymesh and open3d.
 ```bash
 conda install -c conda-forge pymesh2
 conda install -c open3d-admin open3d

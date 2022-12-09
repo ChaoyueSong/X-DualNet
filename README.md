@@ -14,6 +14,29 @@ Submitted to TPAMI.
 
 The code is coming soon!
 
+## Installation
+- Clone this repo:
+```bash
+git clone https://github.com/ChaoyueSong/X-DualNet.git
+cd X-DualNet
+```
+
+- Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work). And we also need pymesh.
+```bash
+conda install -c conda-forge pymesh2
+conda install -c open3d-admin open3d
+```
+
+- Clone the Synchronized-BatchNorm-PyTorch repo.
+```
+cd models/networks/
+git clone https://github.com/vacancy/Synchronized-BatchNorm-PyTorch
+cp -rf Synchronized-BatchNorm-PyTorch/sync_batchnorm .
+cd ../../
+```
+
+## Dataset preparation
+We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY). And we generate our animal mesh data using [SMAL](https://smal.is.tue.mpg.de/), please download it [here](https://drive.google.com/drive/folders/1uP6H0j7mUJ6utgvXxpT-2rn4EYhJ3el5?usp=sharing).
 
 ## Citation
 If you find our work is useful to your research, please consider citing the paper:

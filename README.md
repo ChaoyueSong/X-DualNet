@@ -21,7 +21,7 @@ git clone https://github.com/ChaoyueSong/X-DualNet.git
 cd X-DualNet
 ```
 
-- Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work, plz install it depends on your cuda version). We also need pymesh and open3d.
+- Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work, plz install it according to your cuda version). We also need pymesh and open3d.
 ```bash
 conda create -n x_dualnet python=3.6
 conda activate x_dualnet

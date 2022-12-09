@@ -24,6 +24,8 @@ cd X-DualNet
 - Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work, plz install it depends on your cuda version). We also need pymesh and open3d.
 ```bash
 conda create -n x_dualnet python=3.6
+conda activate x_dualnet
+# install pytorch, pymesh and open3d
 conda install pytorch==1.8.0 torchvision==0.9.0 torchaudio==0.8.0 cudatoolkit=11.1 -c pytorch -c conda-forge
 conda install -c conda-forge pymesh2
 conda install -c open3d-admin open3d

@@ -42,6 +42,42 @@ cd ../../
 ## Dataset preparation
 We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please download data [here](https://drive.google.com/drive/folders/11LbPXbDg4F_pSIr0sMHzWI08FOC8XvSY). And we generate our animal mesh data using [SMAL](https://smal.is.tue.mpg.de/), please download it [here](https://drive.google.com/drive/folders/1uP6H0j7mUJ6utgvXxpT-2rn4EYhJ3el5?usp=sharing).
 
+## Generating Meshes Using Pretrained model
+By default, it loads the latest checkpoint. It can be changed using `--which_epoch`.
+
+#### 1) SMPL (human) 
+Download the pretrained model from [pretrained model link]() and save them in `checkpoints/human`. Then run the command  
+````bash
+python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
+````
+The results will be saved in `test_results/human/` by default. `human_test_list` is randomly choosed for testing.
+
+#### 2) SMAL (animal) 
+Download the pretrained model from [pretrained model link]() and save them in `checkpoints/animal`. Then run the command 
+````bash
+python test.py --dataset_mode animal --dataroot [Your data path] --gpu_ids 0
+````
+The results will be saved in `test_results/animal/` by default. `animal_test_list` is randomly choosed for testing. For the calculation of CD and EMD, please check [TMNet](https://github.com/jnypan/TMNet) and [MSN](https://github.com/Colin97/MSN-Point-Cloud-Completion).
+
+## Training
+#### 1) SMPL (human) 
+To train new models on human meshes, please run:
+```bash
+python train.py --dataset_mode human --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 4 --gpu_ids 0,1
+```
+The output meshes in the training process will be saved in `output/human/`.
+#### 2) SMAL (animal) 
+To train new models on animal meshes, please run:
+```bash
+python train.py --dataset_mode animal --dataroot [Your data path] --niter 100 --niter_decay 100 --batchSize 6 --gpu_ids 0,1
+```
+The output meshes in the training process will be saved in `output/animal/`.
+
+
+Please change the batch size and gpu_ids as you desired.
+
+If you need continue training from checkpoint, use `--continue_train`.
+
 ## Citation
 If you find our work is useful to your research, please consider citing the paper:
 

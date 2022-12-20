@@ -24,6 +24,7 @@ cd X-DualNet
 - Install the dependencies. Our code has been tested on Python 3.6, PyTorch 1.8 (previous versions also work, plz install it according to your cuda version). We also need pymesh and open3d.
 ```bash
 conda env create -f environment.yml
+conda activate x_dualnet
 ```
 
 - Clone the Synchronized-BatchNorm-PyTorch repo.

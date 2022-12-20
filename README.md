@@ -84,5 +84,10 @@ If you find our work is useful to your research, please consider citing the pape
 }
 ```
 
+## Acknowledgments
+
+This code is heavily based on [CoCosNet](https://github.com/microsoft/CoCosNet). We rewrite the [pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) architecture to ver2ver. We also use Optimal Transport and PointNet++-like convolution code from [FLOT](https://github.com/valeoai/FLOT), Data and Edge loss code from [NPT](https://github.com/jiashunwang/Neural-Pose-Transfer), and [Synchronized Batch Normalization](https://github.com/vacancy/Synchronized-BatchNorm-PyTorch).
+
+We thank all authors for the wonderful code!
 
 

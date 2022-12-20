@@ -53,7 +53,7 @@ Download the pretrained model from [pretrained model link]() and save them in `c
 ````bash
 python test.py --dataset_mode animal --dataroot [Your data path] --gpu_ids 0
 ````
-The results will be saved in `test_results/animal/`. `animal_test_list` is randomly choosed for test and different from it in [3D-CoreNet](https://github.com/ChaoyueSong/3d-corenet). For the calculation of CD and EMD, please check [TMNet](https://github.com/jnypan/TMNet) and [MSN](https://github.com/Colin97/MSN-Point-Cloud-Completion).
+The results will be saved in `test_results/animal/`. `animal_test_list` is randomly choosed for test. For the calculation of CD and EMD, please check [TMNet](https://github.com/jnypan/TMNet) and [MSN](https://github.com/Colin97/MSN-Point-Cloud-Completion).
 
 ## Training
 #### 1) SMPL (human) 

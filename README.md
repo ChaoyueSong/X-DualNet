@@ -1,6 +1,6 @@
 # Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction
 
-#### [Project](https://chaoyuesong.github.io/X-DualNet/) |   [Paper](https://github.com/ChaoyueSong/X-DualNet/misc/paper.pdf)
+#### [Project](https://chaoyuesong.github.io/X-DualNet/) |   [Paper](https://github.com/ChaoyueSong/X-DualNet/misc/x-dualnet.pdf)
 
 **Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction** <br>
 Chaoyue Song,

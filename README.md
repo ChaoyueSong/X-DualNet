@@ -12,8 +12,6 @@ Submitted to TPAMI.
 
 <img src="misc/network.png" width="100%" height="100%" /> <br>
 
-The code is coming soon!
-
 ## Installation
 - Clone this repo:
 ```bash

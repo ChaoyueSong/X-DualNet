@@ -68,7 +68,6 @@ class Graph:
 
         # Edge features
         edge_feats = []
-        # with torch.no_grad():
         for ind_batch in range(size_batch):
             edge_feats.append(
                 points.detach()[ind_batch, neighbors[ind_batch]] - points.detach()[ind_batch, idx] 

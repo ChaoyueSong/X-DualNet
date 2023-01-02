@@ -19,7 +19,7 @@ class TrainOptions(BaseOptions):
         parser.add_argument('--beta1', type=float, default=0, help='momentum term of adam')
         parser.add_argument('--beta2', type=float, default=0.9, help='momentum term of adam')
         parser.add_argument('--lr', type=float, default=0.0001, help='initial learning rate for adam')
-        parser.add_argument('--arap_epoch', type=int, default=100, help='which epoch to add arap')
+        parser.add_argument('--arap_epoch', type=int, default=150, help='which epoch to add arap')
 
         # for discriminators
         parser.add_argument('--ndf', type=int, default=64, help='# of discrim filters in first conv layer')

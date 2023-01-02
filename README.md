@@ -40,7 +40,7 @@ We use [SMPL](https://smpl.is.tue.mpg.de/) as the human mesh data, please downlo
 By default, we load the latest checkpoint for test, which can be changed using `--which_epoch`.
 
 #### 1) SMPL (human) 
-Download the pretrained model from [pretrained model link]() and save them in `checkpoints/human`. Then run the command  
+Download the pretrained model from [pretrained model link](https://www.dropbox.com/scl/fo/f1ra0kujumdprzrm75y86/h?dl=0&rlkey=cy775d80qhcliz0aaqtxf70ab) and save them in `checkpoints/human`. Then run the command  
 ````bash
 python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
 ````

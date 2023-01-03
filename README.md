@@ -47,7 +47,7 @@ python test.py --dataset_mode human --dataroot [Your data path] --gpu_ids 0
 The results will be saved in `test_results/human/`. `human_test_list` is randomly choosed for test and different from it in [3D-CoreNet](https://github.com/ChaoyueSong/3d-corenet).
 
 #### 2) SMAL (animal) 
-Download the pretrained model from [pretrained model link]() and save them in `checkpoints/animal`. Then run the command 
+Download the pretrained model from [pretrained model link](https://www.dropbox.com/scl/fo/yaws6uqnvuq5pi1cms5yl/h?dl=0&rlkey=0o7oi3dtqe987wff7td7ll0vz) and save them in `checkpoints/animal`. Then run the command 
 ````bash
 python test.py --dataset_mode animal --dataroot [Your data path] --gpu_ids 0
 ````

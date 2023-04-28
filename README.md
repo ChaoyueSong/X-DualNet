@@ -76,12 +76,15 @@ If you need continue training from checkpoint, use `--continue_train`.
 If you find our work is useful to your research, please consider citing the paper:
 
 ```bash
-@article{song2022unsupervised,
-  title={Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction},
+@ARTICLE{10076900,
   author={Song, Chaoyue and Wei, Jiacheng and Li, Ruibo and Liu, Fayao and Lin, Guosheng},
-  journal={arXiv preprint arXiv:2211.10278},
-  year={2022}
-}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Unsupervised 3D Pose Transfer With Cross Consistency and Dual Reconstruction}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-13},
+  doi={10.1109/TPAMI.2023.3259059}}
 ```
 
 ## Acknowledgments

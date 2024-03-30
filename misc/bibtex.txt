@@ -1,6 +1,7 @@
-@inproceedings{song2022unsupervised,
-  title={Unsupervised 3D Pose Transfer with Cross Consistency and Dual Reconstruction},
+@article{song2023unsupervised,
+  title={Unsupervised 3d pose transfer with cross consistency and dual reconstruction},
   author={Song, Chaoyue and Wei, Jiacheng and Li, Ruibo and Liu, Fayao and Lin, Guosheng},
-  journal={arXiv preprint arXiv:2211.10278},
-  year={2022}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2023},
+  publisher={IEEE}
 }
